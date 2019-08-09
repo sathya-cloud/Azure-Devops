@@ -1,5 +1,3 @@
-# Powershell Code
-
 - task: PowerShell@2
   inputs:
     filePath: 'https://github.com/sathya-cloud/Azure-Devops/blob/master/Devops_01.ps1'
