@@ -1,0 +1,12 @@
+# Powershell Code
+
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: Devops_01.ps1
+  displayName: 'Azure Initial demo'
