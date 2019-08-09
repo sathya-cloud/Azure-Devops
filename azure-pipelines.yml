@@ -1,12 +1,5 @@
 # Powershell Code
 
-
-trigger:
-- master
-
-pool:
-  vmImage: 'ubuntu-latest'
-
-steps:
-- script: ipconfig
-  displayName: 'Azure Initial demo'
+- task: PowerShell@2
+  inputs:
+    filePath: 'https://github.com/sathya-cloud/Azure-Devops/blob/master/Devops_01.ps1'
