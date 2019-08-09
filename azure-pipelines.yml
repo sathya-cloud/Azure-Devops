@@ -1,4 +1,4 @@
-- task: PowerShell@2
+- task: PowerShell
   inputs:
     targetType: 'inline'
     script: |
