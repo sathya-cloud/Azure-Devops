@@ -8,5 +8,5 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- script: Devops_01.ps1
+- script: ipconfig
   displayName: 'Azure Initial demo'
