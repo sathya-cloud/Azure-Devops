@@ -1,3 +1,11 @@
-- task: AzurePowerShell@4
+# for PowerShell Core
+steps:
+- pwsh: ./my-script.ps1
+
+# for Windows PowerShell
+steps:
+- powershell: .\my-script.ps1
+- task: PowerShell@2
   inputs:
-    ScriptType: 'InlineScript'
+    filePath: 'Azure-Devops/Devops_01.ps1'
+    pwsh: true
