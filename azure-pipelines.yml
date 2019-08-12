@@ -1,11 +1,16 @@
-# for PowerShell Core
-steps:
-- pwsh: ./my-script.ps1
-
-# for Windows PowerShell
-steps:
-- powershell: .\my-script.ps1
+# PowerShell
+# Run a PowerShell script on Linux, macOS, or Windows
 - task: PowerShell@2
   inputs:
-    filePath: 'Azure-Devops/Devops_01.ps1'
-    pwsh: true
+    #targetType: 'filePath' # Optional. Options: filePath, inline
+    #filePath: # Required when targetType == FilePath
+    #arguments: # Optional
+    #script: '# Write your PowerShell commands here.Write-Host Hello World' # Required when targetType == Inline
+    #errorActionPreference: 'stop' # Optional. Options: stop, continue, silentlyContinue
+    #failOnStderr: false # Optional
+    #ignoreLASTEXITCODE: false # Optional
+    #pwsh: false # Optional
+    #workingDirectory: # Optional
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
